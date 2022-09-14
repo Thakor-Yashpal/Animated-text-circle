@@ -1,0 +1,36 @@
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+  </head>
+<div class="box">
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+  <div class="dot"></div>
+</div>
+
+<!-- SVG Filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <filter id="filter-name">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="15"
+        result="my-blur" />
+      <feColorMatrix
+        in="my-blur"
+        mode="matrix"
+        values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 20 -8"
+        result="my-gooey" />
+    </filter>
+  </defs>
+</svg>
+<script src="hh.js"></script>
+
+</body>
+</html>

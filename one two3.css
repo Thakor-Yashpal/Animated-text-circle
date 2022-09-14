@@ -1,0 +1,69 @@
+:root {
+  cursor: none !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Container */
+.box {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  /* SVG Filters should be applied to the container */
+  -webkit-filter: url("#filter-name");
+  filter: url("#filter-name");
+  /*
+  Load filters from external SVGs (optional):
+  filter: url('filters.svg#filter-name');
+  */
+}
+
+/* Dot */
+.dot {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  left: 50%;
+  margin-top: -40px;
+  margin-left: -40px;
+  background: #EEEEEE;
+  border-radius: 40px;
+  transition: ease .1s;
+  pointer-events: none;
+}
+
+.dot:nth-child(5){
+  background: #9C27B0;
+  transition: ease .1s;
+  transform: scale(1);
+}
+
+.dot:nth-child(4){
+  background: #B037AD;
+  transition: ease .12s;
+  transform: scale(.8);
+}
+
+.dot:nth-child(3){
+  background: #C245AA;
+  transition: ease .14s;
+  transform: scale(.6);
+}
+
+.dot:nth-child(2){
+  background: #D252A7;
+  transition: ease .16s;
+  transform: scale(.4);
+}
+
+.dot:nth-child(1){
+  background: #E35FA4;
+  transition: ease .18s;
+  transform: scale(.2);
+}
